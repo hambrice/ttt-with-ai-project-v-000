@@ -5,7 +5,7 @@ module Players
   
     def move(board)
     input = gets.strip  
-    if board.taken?(input)
+    while board.taken?(input)
       puts "That spot is taken! Please pick another."
       self.move(board)
     end
